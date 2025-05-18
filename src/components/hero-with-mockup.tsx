@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Mockup } from "@/components/ui/mockup"
+import { GradientButton } from "@/components/ui/gradient-button"
 import { Glow } from "@/components/ui/glow"
 import { GitHubIcon } from "@/components/ui/icons"
 import Image from "next/image"
@@ -83,47 +82,32 @@ export function HeroWithMockup({
             className="relative z-10 flex flex-wrap justify-center gap-4 
             animate-appear opacity-0 [animation-delay:300ms]"
           >
-            <Button
+            <GradientButton
               asChild
-              size="lg"
-              className={cn(
-                "bg-gradient-to-b from-brand to-brand/90 dark:from-brand/90 dark:to-brand/80",
-                "hover:from-brand/95 hover:to-brand/85 dark:hover:from-brand/80 dark:hover:to-brand/70",
-                "text-white shadow-lg",
-                "transition-all duration-300",
-              )}
+              className="text-white"
             >
               <a href={primaryCta.href}>{primaryCta.text}</a>
-            </Button>
+            </GradientButton>
 
-            <Button
+            <GradientButton
               asChild
-              size="lg"
-              variant="ghost"
-              className={cn(
-                "text-foreground/80 dark:text-foreground/70",
-                "transition-all duration-300",
-              )}
+              variant="variant"
             >
               <a href={secondaryCta.href}>
                 {secondaryCta.icon}
                 {secondaryCta.text}
               </a>
-            </Button>
+            </GradientButton>
           </div>
 
           {/* Mockup */}
           <div className="relative w-full pt-12 px-4 sm:px-6 lg:px-8">
-            <Mockup
+            <div
               className={cn(
                 "animate-appear opacity-0 [animation-delay:700ms]",
-                "shadow-[0_0_50px_-12px_rgba(0,0,0,0.3)] dark:shadow-[0_0_50px_-12px_rgba(255,255,255,0.1)]",
-                "border-brand/10 dark:border-brand/5",
+                "shadow-lg border border-gray-200 dark:border-gray-800",
+                "rounded-lg overflow-hidden",
               )}
-              glowing={true}
-              glowingDisabled={false}
-              borderWidth={2}
-              spread={30}
             >
               <Image
                 src={mockupImage.src}
@@ -133,7 +117,7 @@ export function HeroWithMockup({
                 className="w-full h-auto"
                 priority
               />
-            </Mockup>
+            </div>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { GradientButton } from "@/components/ui/gradient-button";
 
 export interface Testimonial {
   id: string;
@@ -98,13 +99,13 @@ export function TestimonialCarousel({
 
   return (
     <div className={cn("relative w-full max-w-4xl mx-auto", className)}>
-      <div className="overflow-hidden rounded-lg bg-background p-6 shadow-md">
+      <div className="overflow-hidden rounded-lg bg-background p-4 sm:p-6 shadow-md">
         <div className="text-center mb-4">
-          <h3 className="text-2xl font-bold mb-1">What Our Clients Say</h3>
-          <p className="text-muted-foreground">From verified Google Reviews</p>
+          <h3 className="text-xl sm:text-2xl font-bold mb-1">What Our Clients Say</h3>
+          <p className="text-sm sm:text-base text-muted-foreground">From verified Google Reviews</p>
         </div>
 
-        <div className="relative h-64">
+        <div className="relative min-h-[240px] sm:h-64">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
               key={currentIndex}
@@ -133,17 +134,17 @@ export function TestimonialCarousel({
                   />
                 ))}
               </div>
-              <blockquote className="text-center">
-                <p className="text-lg italic mb-4">&ldquo;{testimonials[currentIndex].text}&rdquo;</p>
+              <blockquote className="text-center px-2 sm:px-4">
+                <p className="text-sm sm:text-lg italic mb-4 line-clamp-5 sm:line-clamp-none overflow-hidden break-words">&ldquo;{testimonials[currentIndex].text}&rdquo;</p>
                 <footer className="font-medium">
                   {testimonials[currentIndex].image && (
                     <img
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].author}
-                      className="w-12 h-12 rounded-full mx-auto mb-2 object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mx-auto mb-2 object-cover"
                     />
                   )}
-                  <cite className="not-italic">{testimonials[currentIndex].author}</cite>
+                  <cite className="not-italic text-sm sm:text-base">{testimonials[currentIndex].author}</cite>
                 </footer>
               </blockquote>
             </motion.div>
@@ -151,38 +152,44 @@ export function TestimonialCarousel({
         </div>
 
         <div className="flex justify-center mt-4 gap-2">
-          <button
+          <GradientButton
             onClick={prevTestimonial}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+            className={cn(
+              "min-w-0 p-1.5 sm:p-2 rounded-full", 
+              "flex items-center justify-center"
+            )}
             aria-label="Previous testimonial"
           >
-            <ChevronLeft className="size-5" />
-          </button>
+            <ChevronLeft className="size-4 sm:size-5" />
+          </GradientButton>
           <div className="flex items-center gap-1">
             {testimonials.map((_, index) => (
-              <button
+              <GradientButton
                 key={index}
                 onClick={() => {
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
                 className={cn(
-                  "w-2 h-2 rounded-full transition-all",
+                  "min-w-0 h-2 rounded-full transition-all",
                   index === currentIndex
-                    ? "bg-primary w-4"
-                    : "bg-primary/30 hover:bg-primary/50"
+                    ? "w-4"
+                    : "w-2"
                 )}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
-          <button
+          <GradientButton
             onClick={nextTestimonial}
-            className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+            className={cn(
+              "min-w-0 p-1.5 sm:p-2 rounded-full", 
+              "flex items-center justify-center"
+            )}
             aria-label="Next testimonial"
           >
-            <ChevronRight className="size-5" />
-          </button>
+            <ChevronRight className="size-4 sm:size-5" />
+          </GradientButton>
         </div>
       </div>
     </div>

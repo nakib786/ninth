@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { GradientButton } from '@/components/ui/gradient-button';
+import { cn } from '@/lib/utils';
 
 // Mock blog post data
 const blogPosts = [
@@ -128,17 +130,18 @@ export default function BlogPosts() {
             <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-4">Categories</h2>
             <div className="space-y-2">
               {categories.map((category) => (
-                <button
+                <GradientButton
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`block w-full text-left px-3 py-2 rounded-md ${
+                  className={cn(
+                    "block w-full text-left px-3 py-2",
                     selectedCategory === category
-                      ? 'bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 font-medium'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
-                  }`}
+                      ? ""
+                      : "opacity-70 hover:opacity-100"
+                  )}
                 >
                   {category}
-                </button>
+                </GradientButton>
               ))}
             </div>
           </div>
@@ -153,11 +156,9 @@ export default function BlogPosts() {
               placeholder="Your email address"
               className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-2"
             />
-            <button
-              className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-            >
+            <GradientButton className="w-full">
               Subscribe
-            </button>
+            </GradientButton>
           </div>
         </div>
         
@@ -223,18 +224,18 @@ export default function BlogPosts() {
           {filteredPosts.length > 0 && (
             <div className="mt-10 flex justify-center">
               <nav className="inline-flex rounded-md shadow">
-                <button className="px-3 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
+                <GradientButton className="min-w-0 rounded-l-md !rounded-r-none">
                   Previous
-                </button>
-                <button className="px-3 py-2 border-t border-b border-gray-300 dark:border-gray-600 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400">
+                </GradientButton>
+                <GradientButton className="min-w-0 !rounded-none" variant="variant">
                   1
-                </button>
-                <button className="px-3 py-2 border-t border-b border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
+                </GradientButton>
+                <GradientButton className="min-w-0 !rounded-none">
                   2
-                </button>
-                <button className="px-3 py-2 rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700">
+                </GradientButton>
+                <GradientButton className="min-w-0 rounded-r-md !rounded-l-none">
                   Next
-                </button>
+                </GradientButton>
               </nav>
             </div>
           )}

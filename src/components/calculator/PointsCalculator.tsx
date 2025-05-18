@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
+import { GradientButton } from '@/components/ui/gradient-button';
+import { cn } from '@/lib/utils';
 
 const programs = [
   { id: 'express-entry', name: 'Express Entry (CRS)' },
@@ -206,12 +208,11 @@ export default function PointsCalculator() {
                 ))}
                 
                 <div className="flex justify-end">
-                  <button
+                  <GradientButton
                     onClick={handleCalculate}
-                    className="px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Calculate Points
-                  </button>
+                  </GradientButton>
                 </div>
               </div>
             </Tabs.Content>

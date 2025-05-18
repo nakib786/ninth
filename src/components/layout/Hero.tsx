@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ExpressEntryRound } from "@/lib/scraper";
-import { GlowingContainer } from "@/components/ui/glowing-container";
 
 export function Hero() {
   const [latestDraw, setLatestDraw] = useState<ExpressEntryRound | null>(null);
@@ -117,13 +116,7 @@ export function Hero() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <GlowingContainer
-              glow={true}
-              disabled={false}
-              spread={30}
-              borderWidth={2}
-              className="relative w-full max-w-[600px] overflow-visible rounded-lg border border-gray-200 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-950 animate-fadeIn"
-            >
+            <div className="relative w-full max-w-[600px] overflow-hidden rounded-lg border border-gray-200 bg-white shadow-2xl dark:border-gray-800 dark:bg-gray-950 animate-fadeIn">
               <div className="flex items-center gap-2 border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-800 dark:bg-gray-900">
                 <div className="h-3 w-3 rounded-full bg-red-500"></div>
                 <div className="h-3 w-3 rounded-full bg-yellow-500"></div>
@@ -207,7 +200,7 @@ export function Hero() {
                   </div>
                 </div>
               </div>
-            </GlowingContainer>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { GradientButton } from '@/components/ui/gradient-button';
+import { cn } from '@/lib/utils';
 
 export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
@@ -14,10 +16,13 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button
+    <GradientButton
       aria-label="Toggle Dark Mode"
       type="button"
-      className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-900"
+      className={cn(
+        "p-2 min-w-0 rounded-full", 
+        "flex items-center justify-center"
+      )}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'dark' ? (
@@ -25,6 +30,6 @@ export default function ThemeToggle() {
       ) : (
         <MoonIcon className="h-5 w-5" />
       )}
-    </button>
+    </GradientButton>
   );
 } 

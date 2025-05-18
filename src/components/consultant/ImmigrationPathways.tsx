@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { GlowingContainer } from '@/components/ui/glowing-container';
 
 // Mock data for immigration pathways
 const immigrationPathways = [
@@ -129,93 +128,94 @@ export default function ImmigrationPathways() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
           >
-            <button
-              onClick={() => togglePathway(pathway.id)}
-              className="w-full p-5 flex items-center justify-between text-left"
-            >
-              <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
-                {pathway.name}
-              </h2>
-              <svg
-                className={`h-5 w-5 text-gray-500 transition-transform ${expandedPathway === pathway.id ? 'transform rotate-180' : ''}`}
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
+              <button
+                onClick={() => togglePathway(pathway.id)}
+                className="w-full p-5 flex items-center justify-between text-left"
               >
-                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </button>
-            
-            {expandedPathway === pathway.id && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="px-5 pb-5"
-              >
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {pathway.description}
-                </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                  <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
-                    <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
-                      Eligibility
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {pathway.eligibility}
-                    </p>
+                <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                  {pathway.name}
+                </h2>
+                <svg
+                  className={`h-5 w-5 text-gray-500 transition-transform ${expandedPathway === pathway.id ? 'transform rotate-180' : ''}`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              
+              {expandedPathway === pathway.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-5 pb-5"
+                >
+                  <p className="text-gray-600 dark:text-gray-400 mb-4">
+                    {pathway.description}
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
+                      <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
+                        Eligibility
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {pathway.eligibility}
+                      </p>
+                    </div>
+                    
+                    <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
+                      <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
+                        Processing Time
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {pathway.processingTime}
+                      </p>
+                    </div>
+                    
+                    <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
+                      <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
+                        Application Fee
+                      </h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {pathway.fee}
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
-                    <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
-                      Processing Time
+                  <div className="mb-4">
+                    <h3 className="text-md font-medium text-gray-800 dark:text-gray-200 mb-2">
+                      Application Process
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {pathway.processingTime}
-                    </p>
+                    <ol className="list-decimal list-inside space-y-1 text-gray-600 dark:text-gray-400">
+                      {pathway.steps.map((step, stepIndex) => (
+                        <li key={stepIndex}>{step}</li>
+                      ))}
+                    </ol>
                   </div>
                   
-                  <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-md">
-                    <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200 mb-1">
-                      Application Fee
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {pathway.fee}
-                    </p>
+                  <div className="flex justify-end">
+                    <Link 
+                      href={`/points-calculator?program=${pathway.id}`}
+                      className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium"
+                    >
+                      Check Eligibility with Points Calculator →
+                    </Link>
                   </div>
-                </div>
-                
-                <div className="mb-4">
-                  <h3 className="text-md font-medium text-gray-800 dark:text-gray-200 mb-2">
-                    Application Process
-                  </h3>
-                  <ol className="list-decimal list-inside space-y-1 text-gray-600 dark:text-gray-400">
-                    {pathway.steps.map((step, stepIndex) => (
-                      <li key={stepIndex}>{step}</li>
-                    ))}
-                  </ol>
-                </div>
-                
-                <div className="flex justify-end">
-                  <Link 
-                    href={`/points-calculator?program=${pathway.id}`}
-                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium"
-                  >
-                    Check Eligibility with Points Calculator →
-                  </Link>
-                </div>
-              </motion.div>
-            )}
+                </motion.div>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>
       
       <div className="mt-10">
-        <GlowingContainer className="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800">
+        <div className="bg-indigo-50 dark:bg-indigo-900/30 p-6 rounded-lg border border-indigo-200 dark:border-indigo-800 shadow-md">
           <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
             Need Help Choosing the Right Pathway?
           </h2>
@@ -228,7 +228,7 @@ export default function ImmigrationPathways() {
           >
             Contact Us for a Consultation
           </Link>
-        </GlowingContainer>
+        </div>
       </div>
     </motion.div>
   );

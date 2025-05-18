@@ -24,7 +24,7 @@ export default function WhatsAppChat() {
   const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -32,7 +32,7 @@ export default function WhatsAppChat() {
         aria-label="Open WhatsApp Chat"
       >
         {!isOpen ? (
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
             <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.447.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
           </svg>
         ) : (
@@ -48,7 +48,7 @@ export default function WhatsAppChat() {
 
       {/* Chat Panel */}
       {isOpen && (
-        <div className="absolute bottom-16 right-0 w-80 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+        <div className="absolute bottom-16 right-0 w-[calc(100vw-32px)] sm:w-80 max-w-sm rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
           {/* Header */}
           <div className="bg-indigo-600 p-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
@@ -78,26 +78,26 @@ export default function WhatsAppChat() {
           </div>
           
           {/* Chat Body */}
-          <div className="p-4 bg-gray-50 dark:bg-gray-900 h-80 overflow-auto">
-            <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-sm mb-4 max-w-3/4 ml-auto text-right">
+          <div className="p-4 bg-gray-50 dark:bg-gray-900 h-64 sm:h-80 overflow-auto">
+            <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow-sm mb-4 max-w-[75%] ml-auto text-right">
               <p className="text-gray-800 dark:text-gray-200 text-sm">Hi there! 👋 How can we help you with your immigration needs today?</p>
               <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 block">{currentTime}</span>
             </div>
             
-            <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg shadow-sm mb-4 max-w-3/4">
+            <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg shadow-sm mb-4 max-w-[75%]">
               <p className="text-gray-800 dark:text-gray-200 text-sm">Choose from the frequently asked questions below or send us a custom message!</p>
               <span className="text-xs text-gray-500 dark:text-gray-400 mt-1 block">{currentTime}</span>
             </div>
           </div>
           
           {/* Question Options */}
-          <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 space-y-2">
+          <div className="p-3 sm:p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 space-y-2">
             <h4 className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">Ask a question:</h4>
             {presetQuestions.map((question, index) => (
               <button
                 key={index}
                 onClick={() => handleQuestionClick(question)}
-                className="w-full text-left p-2 rounded-lg text-xs border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300"
+                className="w-full text-left p-2 rounded-lg text-xs border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors text-gray-700 dark:text-gray-300 line-clamp-2"
               >
                 {question}
               </button>

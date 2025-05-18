@@ -1,5 +1,6 @@
 'use client';
 
+import { GradientButton } from "@/components/ui/gradient-button";
 import Link from "next/link";
 import { Hero } from "@/components/layout/Hero";
 import AnimatedReviewsSection from "@/components/animated-reviews-section";
@@ -77,12 +78,13 @@ export default function Home() {
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
             Take the first step towards your new life in Canada. Explore immigration pathways and find the perfect program for your situation.
           </p>
-          <Link
-            href="/immigration-pathways"
-            className="inline-flex items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            Explore Immigration Pathways
-          </Link>
+          <GradientButton asChild>
+            <Link
+              href="/immigration-pathways"
+            >
+              Explore Immigration Pathways
+            </Link>
+          </GradientButton>
         </div>
       </section>
     </main>

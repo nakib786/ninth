@@ -5,6 +5,9 @@ import { useState, useEffect } from 'react';
 import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import ThemeToggle from '@/components/ui/ThemeToggle';
 import { Logo } from '@/components/ui/Logo';
+import { TypewriterBrand } from '@/components/ui/TypewriterBrand';
+import { GradientButton } from '@/components/ui/gradient-button';
+import { cn } from '@/lib/utils';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +37,21 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 flex items-center">
-            <div className="p-1 rounded-lg hover:bg-white/10 dark:hover:bg-gray-800/30 transition-colors">
+          {/* Logo section */}
+          <div className="flex items-center">
+            {/* Desktop Logo */}
+            <div className="hidden sm:block rounded-lg hover:bg-white/10 dark:hover:bg-gray-800/30 transition-colors">
               <Logo />
+            </div>
+            
+            {/* Mobile Logo & Brand */}
+            <div className="flex sm:hidden items-center gap-3">
+              <div className="flex-shrink-0">
+                <Logo compact={true} />
+              </div>
+              <div className="min-w-[160px]">
+                <TypewriterBrand />
+              </div>
             </div>
           </div>
           
@@ -69,13 +84,17 @@ export default function Header() {
             
             {/* Updates dropdown menu */}
             <div className="relative inline-block">
-              <button
+              <GradientButton
                 onClick={toggleUpdatesDropdown}
-                className="text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium flex items-center transition-colors duration-200"
+                className={cn(
+                  "min-w-0 px-3 py-2",
+                  "flex items-center", 
+                  "text-sm"
+                )}
               >
                 Updates
                 <ChevronDownIcon className="ml-1 h-4 w-4" />
-              </button>
+              </GradientButton>
               
               {isUpdatesDropdownOpen && (
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg glass-effect ring-1 ring-black/5 dark:ring-white/10 z-10">
@@ -109,9 +128,13 @@ export default function Header() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <ThemeToggle />
-            <button
+            <GradientButton
               type="button"
-              className="ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors duration-200"
+              className={cn(
+                "ml-4 min-w-0",
+                "p-2 rounded-full",
+                "flex items-center justify-center"
+              )}
               onClick={toggleMenu}
             >
               <span className="sr-only">Open main menu</span>
@@ -120,7 +143,7 @@ export default function Header() {
               ) : (
                 <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
               )}
-            </button>
+            </GradientButton>
           </div>
         </div>
       </div>

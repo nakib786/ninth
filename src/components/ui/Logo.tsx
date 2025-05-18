@@ -13,8 +13,8 @@ export function Logo({ className, compact = false }: LogoProps) {
         <Image
           src="/ninth-house-logo.png"
           alt="The Ninth House Immigration Solutions Inc. Logo"
-          width={compact ? 40 : 60}
-          height={compact ? 40 : 60}
+          width={compact ? 44 : 60}
+          height={compact ? 44 : 60}
           className="rounded-full"
         />
         {!compact && (

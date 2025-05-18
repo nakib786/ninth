@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { TestimonialCarousel } from "@/components/ui/testimonial-carousel";
 import { Testimonial } from "@/components/ui/testimonial-carousel";
 import { FALLBACK_GOOGLE_REVIEWS, fetchGoogleReviews } from "@/lib/google-reviews";
-import { GlowingContainer } from "@/components/ui/glowing-container";
 
 interface ReviewsSectionProps {
   reviewUrl?: string;
@@ -55,15 +54,9 @@ export default function ReviewsSection({
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
           </div>
         ) : (
-          <GlowingContainer 
-            disabled={false} 
-            glow={true}
-            spread={30}
-            borderWidth={2}
-            className="p-6 overflow-visible"
-          >
+          <div className="p-6 overflow-visible rounded-lg border border-gray-200 shadow-md dark:border-gray-800">
             <TestimonialCarousel testimonials={testimonials} />
-          </GlowingContainer>
+          </div>
         )}
         
         <div className="mt-8 text-center">
