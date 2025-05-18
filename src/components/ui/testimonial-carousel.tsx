@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -58,19 +59,19 @@ export function TestimonialCarousel({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setDirection(1);
     setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [testimonials.length]);
 
-  const prevTestimonial = () => {
+  const prevTestimonial = useCallback(() => {
     setDirection(-1);
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
-  };
+  }, [testimonials.length]);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -80,7 +81,7 @@ export function TestimonialCarousel({
     }, interval);
 
     return () => clearInterval(timer);
-  }, [autoPlay, interval, currentIndex]);
+  }, [autoPlay, interval, nextTestimonial]);
 
   const variants = {
     enter: (direction: number) => ({
@@ -138,9 +139,11 @@ export function TestimonialCarousel({
                 <p className="text-sm sm:text-lg italic mb-4 line-clamp-5 sm:line-clamp-none overflow-hidden break-words">&ldquo;{testimonials[currentIndex].text}&rdquo;</p>
                 <footer className="font-medium">
                   {testimonials[currentIndex].image && (
-                    <img
+                    <Image
                       src={testimonials[currentIndex].image}
                       alt={testimonials[currentIndex].author}
+                      width={40}
+                      height={40}
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mx-auto mb-2 object-cover"
                     />
                   )}

@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import * as Tabs from '@radix-ui/react-tabs';
 import { GradientButton } from '@/components/ui/gradient-button';
-import { cn } from '@/lib/utils';
 
 const programs = [
   { id: 'express-entry', name: 'Express Entry (CRS)' },
