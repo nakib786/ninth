@@ -105,10 +105,10 @@ $("#q4").append(q4_options);
 var celpip = [
 	[	
 		"H", // option value
-		"10, 11, 12",  // option text for Speaking
-		"10, 11, 12",  // option text for Listening
-		"10, 11, 12",  // option text for Reading
-		"10, 11, 12",  // option text for Writing
+		"10 - 12",  // option text for Speaking
+		"10 - 12",  // option text for Listening
+		"10 - 12",  // option text for Reading
+		"10 - 12",  // option text for Writing
 		"10",  // Canadian Language Benchmark (CLB) score
 		"32", // Score w/ spouse first official language
 		"34", // Score w/o spouse first official language
@@ -122,29 +122,29 @@ var celpip = [
 	["D", "6", "6", "6", "6", "6", "8", "9", "1", "1", "1"],
 	["C", "5", "5", "5", "5", "5", "6", "6", "1", "1", "1"],
 	["B", "4", "4", "4", "4", "4", "6", "6", "0", "0", "0"],
-	["A", "M, 0-3", "M, 0-3", "M, 0-3", "M, 0-3", "0", "0", "0", "0", "0", "0"]
+	["A", "M, 0 - 3", "M, 0 - 3", "M, 0 - 3", "M, 0 - 3", "0", "0", "0", "0", "0", "0"]
 ];
 
 var ielts = [
-	["H", "7.5-9.0", "8.5-9.0", "8.0-9.0", "7.5-9.0", "10", "32", "34", "6", "6", "5"],
-	["G", "7.0", "8.0", "7.0-7.5", "7.0", "9", "29", "31", "6", "6", "5"],
+	["H", "7.5 – 9.0", "8.5 – 9.0", "8.0 – 9.0", "7.5 – 9.0", "10", "32", "34", "6", "6", "5"],
+	["G", "7.0", "8.0", "7.0 - 7.5", "7.0", "9", "29", "31", "6", "6", "5"],
 	["F", "6.5", "7.5", "6.5", "6.5", "8", "22", "23", "3", "3", "3"],
-	["E", "6.0", "6.0-7.0", "6.0", "6.0", "7", "16", "17", "3", "3", "3"],
-	["D", "5.5", "5.5", "5.0-5.5", "5.5", "6", "8", "9", "1", "1", "1"],
-	["C", "5.0", "5.0", "4.0-4.5", "5.0", "5", "6", "6", "1", "1", "1"],
-	["B", "4.0-4.5", "4.5", "3.5", "4.0-4.5", "4", "6", "6", "0", "0", "0"],
-	["A", "0-3.5", "0-4.0", "0-3.0", "0-3.5", "0", "0", "0", "0", "0", "0"]
+	["E", "6.0", "6 .0- 7.0", "6.0", "6.0", "7", "16", "17", "3", "3", "3"],
+	["D", "5.5", "5.5", "5.0 - 5.5", "5.5", "6", "8", "9", "1", "1", "1"],
+	["C", "5.0", "5.0", "4.0 - 4.5", "5.0", "5", "6", "6", "1", "1", "1"],
+	["B", "4.0 - 4.5", "4.5", "3.5", "4.0 - 4.5", "4", "6", "6", "0", "0", "0"],
+	["A", "0 - 3.5", "0- 4.0", "0 - 3.0", "0 - 3.5", "0", "0", "0", "0", "0", "0"]
 ];
 
 var pte = [
-	["H", "89-90", "89-90", "88-90", "90", "10", "32", "34", "6", "6", "5"],
-	["G", "84-88", "82-88", "78-87", "88-89", "9", "29", "31", "6", "6", "5"],
-	["F", "76-83", "71-81", "69-77", "79-87", "8", "22", "23", "3", "3", "3"],
-	["E", "68-75", "60-70", "60-68", "69-78", "7", "16", "17", "3", "3", "3"],
-	["D", "59-67", "50-59", "51-59", "60-68", "6", "8", "9", "1", "1", "1"],
-	["C", "51-58", "39-49", "42-50", "51-59", "5", "6", "6", "1", "1", "1"],
-	["B", "42-50", "28-38", "33-41", "41-50", "4", "6", "6", "0", "0", "0"],
-	["A", "0-41", "0-27", "0-32", "0-40", "0", "0", "0", "0", "0", "0"]
+	["H", "89 - 90", "89 - 90", "88 - 90", "90", "10", "32", "34", "6", "6", "5"],
+	["G", "84 - 88", "82 - 88", "78 - 87", "88 - 89", "9", "29", "31", "6", "6", "5"],
+	["F", "76 - 83", "71 - 81", "69 - 77", "79 - 87", "8", "22", "23", "3", "3", "3"],
+	["E", "68 - 75", "60 - 70", "60 - 68", "69 - 78", "7", "16", "17", "3", "3", "3"],
+	["D", "59 - 67", "50 - 59", "51 - 59", "60 - 68", "6", "8", "9", "1", "1", "1"],
+	["C", "51 - 58", "39 - 49", "42 - 50", "51 - 59", "5", "6", "6", "1", "1", "1"],
+	["B", "42 - 50", "28 - 38", "33 - 41", "41 - 50", "4", "6", "6", "0", "0", "0"],
+	["A", "0 - 41", "0- 27", "0 - 32", "0 - 40", "0", "0", "0", "0", "0", "0"]
 ];
  
 var tef = [
@@ -155,7 +155,7 @@ var tef = [
 	["D", "271-309", "217-248", "181-206", "271-309", "6", "8", "9", "1", "1", "1"],
 	["C", "226-270", "181-216", "151-180", "226-270", "5", "6", "6", "1", "1", "1"],
 	["B", "181-225", "145-180", "121-150", "181-225", "4", "6", "6", "0", "0", "0"],
-	["A", "0-180", "0-144", "0-120", "0-180", "0", "0", "0", "0", "0", "0"]
+	["A", "0 - 180", "0 - 144", "0 - 120", "0 - 180", "0", "0", "0", "0", "0", "0"]
 ];  
 
 var tcf = [
@@ -372,79 +372,49 @@ $( "#q5i-a" ).change( function() {
 	// If user made valid selection
 	if (fol_test != "badvalue") {
 		// Create the <option> elements, values are set further up the code.
-		// Show CELPIP (score labels are levels 4-12)
+		// Show CELPIP
 		if (fol_test == "A") {
-			// Set label for CELPIP
-			document.getElementById("speaking-label").innerHTML = "CELPIP Speaking:";
-			document.getElementById("listening-label").innerHTML = "CELPIP Listening:";
-			document.getElementById("reading-label").innerHTML = "CELPIP Reading:";
-			document.getElementById("writing-label").innerHTML = "CELPIP Writing:";
-			
 			for (i=0; i < celpip.length; i++) {
-				q5i_b_speaking += '<option value="' + celpip[i][0] + '">' + celpip[i][1] + '</option>';
-				q5i_b_listening += '<option value="' + celpip[i][0] + '">' + celpip[i][2] + '</option>';
-				q5i_b_reading += '<option value="' + celpip[i][0] + '">' + celpip[i][3] + '</option>';
-				q5i_b_writing += '<option value="' + celpip[i][0] + '">' + celpip[i][4] + '</option>';	
+				q5i_b_speaking += '<option value="' + celpip[i][0] + '"">' + celpip[i][1] + '</option>';
+				q5i_b_listening += '<option value="' + celpip[i][0] + '"">' + celpip[i][2] + '</option>';
+				q5i_b_reading += '<option value="' + celpip[i][0] + '"">' + celpip[i][3] + '</option>';
+				q5i_b_writing += '<option value="' + celpip[i][0] + '"">' + celpip[i][4] + '</option>';	
 			}
 		}
-		// Show IELTS (score labels are bands 0-9)
+		// Show IELTS
 		else if (fol_test == "B") {
-			// Set label for IELTS
-			document.getElementById("speaking-label").innerHTML = "IELTS Speaking:";
-			document.getElementById("listening-label").innerHTML = "IELTS Listening:";
-			document.getElementById("reading-label").innerHTML = "IELTS Reading:";
-			document.getElementById("writing-label").innerHTML = "IELTS Writing:";
-			
 			for (i=0; i < ielts.length; i++) {
-				q5i_b_speaking += '<option value="' + ielts[i][0] + '">' + ielts[i][1] + '</option>';
-				q5i_b_listening += '<option value="' + ielts[i][0] + '">' + ielts[i][2] + '</option>';
-				q5i_b_reading += '<option value="' + ielts[i][0] + '">' + ielts[i][3] + '</option>';
-				q5i_b_writing += '<option value="' + ielts[i][0] + '">' + ielts[i][4] + '</option>';	
+				q5i_b_speaking += '<option value="' + ielts[i][0] + '"">' + ielts[i][1] + '</option>';
+				q5i_b_listening += '<option value="' + ielts[i][0] + '"">' + ielts[i][2] + '</option>';
+				q5i_b_reading += '<option value="' + ielts[i][0] + '"">' + ielts[i][3] + '</option>';
+				q5i_b_writing += '<option value="' + ielts[i][0] + '"">' + ielts[i][4] + '</option>';	
 			}
 		}
-		// Show TEF (score labels are numeric ranges)
+		// Show TEF
 		else if (fol_test == "C") {
-			// Set label for TEF
-			document.getElementById("speaking-label").innerHTML = "TEF Speaking:";
-			document.getElementById("listening-label").innerHTML = "TEF Listening:";
-			document.getElementById("reading-label").innerHTML = "TEF Reading:";
-			document.getElementById("writing-label").innerHTML = "TEF Writing:";
-			
 			for (i=0; i < tef.length; i++) {
-				q5i_b_speaking += '<option value="' + tef[i][0] + '">' + tef[i][1] + '</option>';
-				q5i_b_listening += '<option value="' + tef[i][0] + '">' + tef[i][2] + '</option>';
-				q5i_b_reading += '<option value="' + tef[i][0] + '">' + tef[i][3] + '</option>';
-				q5i_b_writing += '<option value="' + tef[i][0] + '">' + tef[i][4] + '</option>';	
+				q5i_b_speaking += '<option value="' + tef[i][0] + '"">' + tef[i][1] + '</option>';
+				q5i_b_listening += '<option value="' + tef[i][0] + '"">' + tef[i][2] + '</option>';
+				q5i_b_reading += '<option value="' + tef[i][0] + '"">' + tef[i][3] + '</option>';
+				q5i_b_writing += '<option value="' + tef[i][0] + '"">' + tef[i][4] + '</option>';	
 			}
 		}
-		// Show TCF (score labels are numeric ranges)
+		// Show TCF
 		else if (fol_test == "D") {
-			// Set label for TCF
-			document.getElementById("speaking-label").innerHTML = "TCF Speaking:";
-			document.getElementById("listening-label").innerHTML = "TCF Listening:";
-			document.getElementById("reading-label").innerHTML = "TCF Reading:";
-			document.getElementById("writing-label").innerHTML = "TCF Writing:";
-			
 			for (i=0; i < tcf.length; i++) {
-				q5i_b_speaking += '<option value="' + tcf[i][0] + '">' + tcf[i][1] + '</option>';
-				q5i_b_listening += '<option value="' + tcf[i][0] + '">' + tcf[i][2] + '</option>';
-				q5i_b_reading += '<option value="' + tcf[i][0] + '">' + tcf[i][3] + '</option>';
-				q5i_b_writing += '<option value="' + tcf[i][0] + '">' + tcf[i][4] + '</option>';	
+				q5i_b_speaking += '<option value="' + tcf[i][0] + '"">' + tcf[i][1] + '</option>';
+				q5i_b_listening += '<option value="' + tcf[i][0] + '"">' + tcf[i][2] + '</option>';
+				q5i_b_reading += '<option value="' + tcf[i][0] + '"">' + tcf[i][3] + '</option>';
+				q5i_b_writing += '<option value="' + tcf[i][0] + '"">' + tcf[i][4] + '</option>';	
 			}
 		}
-		// Show PTE (score labels are numeric ranges 0-90)
+		// Show PTE
 		else if (fol_test == "E") {
-			// Set label for PTE
-			document.getElementById("speaking-label").innerHTML = "PTE Speaking:";
-			document.getElementById("listening-label").innerHTML = "PTE Listening:";
-			document.getElementById("reading-label").innerHTML = "PTE Reading:";
-			document.getElementById("writing-label").innerHTML = "PTE Writing:";
-			
 			for (i=0; i < pte.length; i++) {
-				q5i_b_speaking += '<option value="' + pte[i][0] + '">' + pte[i][1] + '</option>';
-				q5i_b_listening += '<option value="' + pte[i][0] + '">' + pte[i][2] + '</option>';
-				q5i_b_reading += '<option value="' + pte[i][0] + '">' + pte[i][3] + '</option>';
-				q5i_b_writing += '<option value="' + pte[i][0] + '">' + pte[i][4] + '</option>';	
+				q5i_b_speaking += '<option value="' + pte[i][0] + '"">' + pte[i][1] + '</option>';
+				q5i_b_listening += '<option value="' + pte[i][0] + '"">' + pte[i][2] + '</option>';
+				q5i_b_reading += '<option value="' + pte[i][0] + '"">' + pte[i][3] + '</option>';
+				q5i_b_writing += '<option value="' + pte[i][0] + '"">' + pte[i][4] + '</option>';	
 			}
 		}
 		
@@ -460,6 +430,8 @@ $( "#q5i-a" ).change( function() {
 	}
 	// Invalid selection, hide next question
 	else {document.getElementById("q5i-b-fol").style.display = "none";}
+	
+		
 });
 
 // set value for the second official language tests
@@ -498,16 +470,18 @@ var fol_lang; // this sets which is their first official language based on their
 function populate_q5ii(taken_test) {
 	$("#q5ii").empty();
 	var q5ii_options = '<option value="badvalue" label="Select...">Select...</option>';
-	// If they picked CELPIP-G, IELTS or PTE, the first official language is English
-	if (taken_test == "A" || taken_test == "B" || taken_test == "E"){ 
+	// If they picked CELPIP-G, IELTS or TEF, the first official language is English
+	if (taken_test == "A" || taken_test == "B"  || taken_test == "E" ){ // 
 		q5ii_options += '<option value="A">TEF Canada</option><option value="B">TCF Canada</option><option value="C">not applicable</option>';
-		fol_lang = "en";
+		 fol_lang = "eng";
 	}
+	
 	// If they picked TEF or TCF, the first official language is French
-	else if (taken_test == "C" || taken_test == "D"){
-		q5ii_options += '<option value="A">CELPIP-G</option><option value="B">IELTS</option><option value="E">PTE Core</option><option value="C">not applicable</option>';
-		fol_lang = "fr";
+	else if (taken_test == "C" || taken_test == "D" ){
+		q5ii_options += '<option value="A">CELPIP-G</option><option value="B">IELTS</option><option value="D">PTE</option><option value="C">not applicable</option>';
+		fol_lang = "fra";
 	}
+	// document.getElementById("q5ii").innerHTML = q5ii_options;
 	$("#q5ii").append(q5ii_options);	
 }
 
@@ -535,86 +509,58 @@ $( "#q5ii" ).change( function() {
 	
 	
 	if (sol_test != "badvalue") {
-		if (sol_test != "C"){ 
+		if (sol_test != "C" && sol_test != "D" ){ 
 			document.getElementById("q5ii-b-sol").style.display = "block";
-			if (fol_lang == "en") {
+			if (fol_lang == "eng") {
 				if (sol_test == "A") {
-					// Set label for TEF as second language
-					document.getElementById("sol-speaking-label").innerHTML = "TEF Speaking:";
-					document.getElementById("sol-listening-label").innerHTML = "TEF Listening:";
-					document.getElementById("sol-reading-label").innerHTML = "TEF Reading:";
-					document.getElementById("sol-writing-label").innerHTML = "TEF Writing:";
-					
 					for (i=0; i < tef.length; i++) {
-						q5ii_sol_speaking += '<option value="' + tef[i][0] + '">' + tef[i][1] + '</option>';
-						q5ii_sol_listening += '<option value="' + tef[i][0] + '">' + tef[i][2] + '</option>';
-						q5ii_sol_reading += '<option value="' + tef[i][0] + '">' + tef[i][3] + '</option>';
-						q5ii_sol_writing += '<option value="' + tef[i][0] + '">' + tef[i][4] + '</option>';	
+						q5ii_sol_speaking += '<option value="' + tef[i][0] + '"">' + tef[i][1] + '</option>';
+						q5ii_sol_listening += '<option value="' + tef[i][0] + '"">' + tef[i][2] + '</option>';
+						q5ii_sol_reading += '<option value="' + tef[i][0] + '"">' + tef[i][3] + '</option>';
+						q5ii_sol_writing += '<option value="' + tef[i][0] + '"">' + tef[i][4] + '</option>';	
 					}
 				}
 				else if (sol_test == "B") {
-					// Set label for TCF as second language
-					document.getElementById("sol-speaking-label").innerHTML = "TCF Speaking:";
-					document.getElementById("sol-listening-label").innerHTML = "TCF Listening:";
-					document.getElementById("sol-reading-label").innerHTML = "TCF Reading:";
-					document.getElementById("sol-writing-label").innerHTML = "TCF Writing:";
-					
 					for (i=0; i < tcf.length; i++) {
-						q5ii_sol_speaking += '<option value="' + tcf[i][0] + '">' + tcf[i][1] + '</option>';
-						q5ii_sol_listening += '<option value="' + tcf[i][0] + '">' + tcf[i][2] + '</option>';
-						q5ii_sol_reading += '<option value="' + tcf[i][0] + '">' + tcf[i][3] + '</option>';
-						q5ii_sol_writing += '<option value="' + tcf[i][0] + '">' + tcf[i][4] + '</option>';	
+						q5ii_sol_speaking += '<option value="' + tcf[i][0] + '"">' + tcf[i][1] + '</option>';
+						q5ii_sol_listening += '<option value="' + tcf[i][0] + '"">' + tcf[i][2] + '</option>';
+						q5ii_sol_reading += '<option value="' + tcf[i][0] + '"">' + tcf[i][3] + '</option>';
+						q5ii_sol_writing += '<option value="' + tcf[i][0] + '"">' + tcf[i][4] + '</option>';	
 					}
 				}
 			}
-			else if (fol_lang == "fr") {
+			else if (fol_lang == "fra") {
 				if (sol_test == "A") {
-					// Set label for CELPIP as second language
-					document.getElementById("sol-speaking-label").innerHTML = "CELPIP Speaking:";
-					document.getElementById("sol-listening-label").innerHTML = "CELPIP Listening:";
-					document.getElementById("sol-reading-label").innerHTML = "CELPIP Reading:";
-					document.getElementById("sol-writing-label").innerHTML = "CELPIP Writing:";
-					
 					for (i=0; i < celpip.length; i++) {
-						q5ii_sol_speaking += '<option value="' + celpip[i][0] + '">' + celpip[i][1] + '</option>';
-						q5ii_sol_listening += '<option value="' + celpip[i][0] + '">' + celpip[i][2] + '</option>';
-						q5ii_sol_reading += '<option value="' + celpip[i][0] + '">' + celpip[i][3] + '</option>';
-						q5ii_sol_writing += '<option value="' + celpip[i][0] + '">' + celpip[i][4] + '</option>';	
+						q5ii_sol_speaking += '<option value="' + celpip[i][0] + '"">' + celpip[i][1] + '</option>';
+						q5ii_sol_listening += '<option value="' + celpip[i][0] + '"">' + celpip[i][2] + '</option>';
+						q5ii_sol_reading += '<option value="' + celpip[i][0] + '"">' + celpip[i][3] + '</option>';
+						q5ii_sol_writing += '<option value="' + celpip[i][0] + '"">' + celpip[i][4] + '</option>';	
 					}
-				}
-				else if (sol_test == "E") {
-					// Set label for PTE as second language
-					document.getElementById("sol-speaking-label").innerHTML = "PTE Speaking:";
-					document.getElementById("sol-listening-label").innerHTML = "PTE Listening:";
-					document.getElementById("sol-reading-label").innerHTML = "PTE Reading:";
-					document.getElementById("sol-writing-label").innerHTML = "PTE Writing:";
 					
+					}
+					
+				if (sol_test == "E") {
 					for (i=0; i < pte.length; i++) {
-						q5ii_sol_speaking += '<option value="' + pte[i][0] + '">' + pte[i][1] + '</option>';
-						q5ii_sol_listening += '<option value="' + pte[i][0] + '">' + pte[i][2] + '</option>';
-						q5ii_sol_reading += '<option value="' + pte[i][0] + '">' + pte[i][3] + '</option>';
-						q5ii_sol_writing += '<option value="' + pte[i][0] + '">' + pte[i][4] + '</option>';	
+						q5ii_sol_speaking += '<option value="' + pte[i][0] + '"">' + pte[i][1] + '</option>';
+						q5ii_sol_listening += '<option value="' + pte[i][0] + '"">' + pte[i][2] + '</option>';
+						q5ii_sol_reading += '<option value="' + pte[i][0] + '"">' + pte[i][3] + '</option>';
+						q5ii_sol_writing += '<option value="' + pte[i][0] + '"">' + pte[i][4] + '</option>';	
 					}
 				}
 				else if (sol_test == "B") {
-					// Set label for IELTS as second language
-					document.getElementById("sol-speaking-label").innerHTML = "IELTS Speaking:";
-					document.getElementById("sol-listening-label").innerHTML = "IELTS Listening:";
-					document.getElementById("sol-reading-label").innerHTML = "IELTS Reading:";
-					document.getElementById("sol-writing-label").innerHTML = "IELTS Writing:";
-					
 					for (i=0; i < ielts.length; i++) {
-						q5ii_sol_speaking += '<option value="' + ielts[i][0] + '">' + ielts[i][1] + '</option>';
-						q5ii_sol_listening += '<option value="' + ielts[i][0] + '">' + ielts[i][2] + '</option>';
-						q5ii_sol_reading += '<option value="' + ielts[i][0] + '">' + ielts[i][3] + '</option>';
-						q5ii_sol_writing += '<option value="' + ielts[i][0] + '">' + ielts[i][4] + '</option>';	
+						q5ii_sol_speaking += '<option value="' + ielts[i][0] + '"">' + ielts[i][1] + '</option>';
+						q5ii_sol_listening += '<option value="' + ielts[i][0] + '"">' + ielts[i][2] + '</option>';
+						q5ii_sol_reading += '<option value="' + ielts[i][0] + '"">' + ielts[i][3] + '</option>';
+						q5ii_sol_writing += '<option value="' + ielts[i][0] + '"">' + ielts[i][4] + '</option>';	
 					}
 				}
-			}
-			$("#q5ii-sol-speaking").append(q5ii_sol_speaking);
-			$("#q5ii-sol-listening").append(q5ii_sol_listening);
-			$("#q5ii-sol-reading").append(q5ii_sol_reading);
-			$("#q5ii-sol-writing").append(q5ii_sol_writing);
+			}				
+				$("#q5ii-sol-speaking").append(q5ii_sol_speaking);
+				$("#q5ii-sol-listening").append(q5ii_sol_listening);
+				$("#q5ii-sol-reading").append(q5ii_sol_reading);
+				$("#q5ii-sol-writing").append(q5ii_sol_writing);
 		} 
 		else {		 
 			document.getElementById("q5ii-b-sol").style.display = "none";
@@ -1065,19 +1011,39 @@ $( "#crs-form" ).submit( function( event ) {
 	answer = $( "#q5ii option:selected" ).val();
 	//set the first official language based on user selection, the "z" variable then becomes the values from the array further up the code
 	if (fol_lang === "en") {
-		if (answer === "A") {z = tef;}
-		else if (answer === "B") {z = tcf;}
+		if (answer === "A") {z = celpip;}
+		else if (answer === "B") {z = ielts;}
+		else if (answer === "C") {z = pte;}
 	}
 	else {
-		if (answer == "A") {z = celpip;}
-		else if (answer == "B") {z = ielts;}
-		else if (answer == "E") {z = pte;}
+		if (answer == "A") {z = tef;}
+		else if (answer == "B") {z = tcf;}
 	}
 	q5_s = $( "#q5ii-sol-speaking option:selected" ).val(); 
 	q5_l = $( "#q5ii-sol-listening option:selected" ).val(); 
 	q5_r = $( "#q5ii-sol-reading option:selected" ).val(); 
 	q5_w = $( "#q5ii-sol-writing option:selected" ).val(); 
 	
+
+	/****Example for  CELPIP:*****/
+		/*
+			[	
+				"H", // option value ___ z[i][0]
+				"10 - 12",  // option text for Speaking ___ z[i][1]
+				"10 - 12",  // option text for Listening ___ z[i][2]
+				"10 - 12",  // option text for Reading ___ z[i][3]
+				"10 - 12",  // option text for Writing ___ z[i][4]
+				"10",  // Canadian Language Benchmark (CLB) score  ___ z[i][5]
+				"32", // Score w/ spouse first official language ___ z[i][6]
+				"34", // Score w/o spouse first official language ___ z[i][7]
+				"6", // Score w/ spouse second official language ___ z[i][8]
+				"6", // Score w/o spouse second official language ___ z[i][9]
+				"5" // additional points for spouse ___ z[i][10]
+			],
+
+			Showing for speaking below, but applies for other categories and tests
+		*/
+		
 	for (i=0; i < z.length; i++) {
 		if (q5_s == z[i][0]) {
 			//if bringing spouse:
@@ -1522,7 +1488,7 @@ $( "#crs-form" ).submit( function( event ) {
 	var study_bonus = 0;
 	/* Bonus points if 	
 		B = One- or two-year diploma or certificate
-		C = Degree, diploma or certificate of three years or longer OR a Master's, professional or doctoral degree of at least one academic year
+		C = Degree, diploma or certificate of three years or longer OR a Master’s, professional or doctoral degree of at least one academic year
 	*/
 	if (q4c_answer == "B") {study_bonus = 15}
 	else if (q4c_answer == "C") {study_bonus = 30}

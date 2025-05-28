@@ -52,7 +52,7 @@ export function Hero() {
                 About Us
               </Link>
               <Link
-                href="/points-calculator"
+                href="/express-entry"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-indigo-600 px-6 py-2 text-sm font-medium text-indigo-600 shadow-sm transition-colors hover:bg-indigo-100 hover:text-indigo-700 dark:text-indigo-400 dark:border-indigo-400 dark:hover:bg-gray-800"
               >
                 Calculate Your Points
@@ -192,7 +192,7 @@ export function Hero() {
                   </div>
                   <div className="flex justify-center">
                     <Link 
-                      href="/points-calculator"
+                      href="/express-entry"
                       className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                     >
                       Improve Your Score

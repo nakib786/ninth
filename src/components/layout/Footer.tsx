@@ -70,11 +70,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="/points-calculator" 
+                  href="/express-entry" 
                   className="text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm transition-colors duration-200 flex items-center group"
                 >
                   <span className="w-0 group-hover:w-2 transition-all duration-300 h-px bg-indigo-500 mr-0 group-hover:mr-2"></span>
-                  Points Calculator
+                  Express Entry
                 </Link>
               </li>
               <li>

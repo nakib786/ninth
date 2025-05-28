@@ -201,10 +201,10 @@ export default function ImmigrationPathways() {
                   
                   <div className="flex justify-end">
                     <Link 
-                      href={`/points-calculator?program=${pathway.id}`}
+                      href={`/express-entry?program=${pathway.id}`}
                       className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 font-medium"
                     >
-                      Check Eligibility with Points Calculator →
+                      Check Eligibility with Express Entry →
                     </Link>
                   </div>
                 </motion.div>

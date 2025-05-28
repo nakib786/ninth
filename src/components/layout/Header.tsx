@@ -64,10 +64,10 @@ export default function Header() {
               About Us
             </Link>
             <Link
-              href="/points-calculator"
+              href="/express-entry"
               className="text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors duration-200"
             >
-              Points Calculator
+              Express Entry
             </Link>
             <Link
               href="/immigration-pathways"
@@ -160,11 +160,11 @@ export default function Header() {
               About Us
             </Link>
             <Link
-              href="/points-calculator"
+              href="/express-entry"
               className="block text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               onClick={toggleMenu}
             >
-              Points Calculator
+              Express Entry
             </Link>
             <Link
               href="/immigration-pathways"
